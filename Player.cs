@@ -32,20 +32,20 @@ public partial class Player : CharacterBody2D
             velocity.Y = JumpVelocity;
 
         
-        if (Input.IsActionPressed("left")) 
+        if (Input.IsActionPressed("left") || Input.IsActionPressed("ui_left")) 
         {
             _sprite.FlipH = true;
-            _animationPlayer.Play("walking");
+            _animationPlayer.Play("walking", -1, 2);
             velocity.X = -Speed;
         }
-        else if (Input.IsActionPressed("right"))
+        else if (Input.IsActionPressed("right") || Input.IsActionPressed("ui_right"))
         {
             _sprite.FlipH = false;
-            _animationPlayer.Play("walking");
+            _animationPlayer.Play("walking", -1, 2);
             velocity.X = Speed;
         } else 
         {
-            _animationPlayer.Play("idle");
+            _animationPlayer.Play("idle", -1, 1.2f);
             velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
         }
 
