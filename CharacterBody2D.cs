@@ -14,8 +14,8 @@ public partial class CharacterBody2D : Godot.CharacterBody2D
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
-		if (!IsOnFloor())
-			velocity.Y += gravity * (float)delta;
+		//if (!IsOnFloor())
+		//	velocity.Y += gravity * (float)delta;
 
 		// Handle Jump.
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
