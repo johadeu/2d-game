@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://w66c78bh6xam" path="res://assets/backgroundlvl/lamp2_2.png" id="13_qkqtq"]
 [ext_resource type="Texture2D" uid="uid://b3femu78kuc8d" path="res://assets/backgroundlvl/darkwall.PNG" id="16_uwi35"]
 [ext_resource type="Texture2D" uid="uid://bwf2sen066fsk" path="res://assets/backgroundlvl/tile6.png" id="17_af5sx"]
+[ext_resource type="PackedScene" uid="uid://7htnqsg8j7rt" path="res://player/player.tscn" id="19_a7j48"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3x6f"]
 size = Vector2(30, 350)
@@ -247,10 +248,6 @@ shape = SubResource("RectangleShape2D_l3x6f")
 position = Vector2(841.75, 342)
 shape = SubResource("RectangleShape2D_qmofv")
 
-[node name="player" parent="." instance=ExtResource("2_1w5hp")]
-position = Vector2(197, 490)
-scale = Vector2(0.3, 0.304)
-
 [node name="Border" type="StaticBody2D" parent="."]
 
 [node name="main floor" type="CollisionShape2D" parent="Border"]
@@ -265,6 +262,6 @@ shape = SubResource("RectangleShape2D_ots6u")
 position = Vector2(1161, 322)
 shape = SubResource("RectangleShape2D_7mdta")
 
-[node name="player" parent="." instance=ExtResource("8_m0ys2")]
-position = Vector2(431, 558)
-scale = Vector2(0.411, 0.411)
+[node name="player" parent="." instance=ExtResource("19_a7j48")]
+position = Vector2(412, 516)
+scale = Vector2(0.3, 0.3)
