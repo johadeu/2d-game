@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsur3lyjqvwrg"]
+[gd_scene load_steps=12 format=3 uid="uid://6pju5rnqr16g"]
 
 [ext_resource type="Texture2D" uid="uid://c3be1b26cbb5r" path="res://assets/backgroundlvl/BG02.png" id="1_qbpom"]
-[ext_resource type="PackedScene" uid="uid://ds0sg1x3rrg8a" path="res://player.tscn" id="2_1w5hp"]
 [ext_resource type="Texture2D" uid="uid://cactxosct6v7b" path="res://assets/backgroundlvl/Death3.png" id="2_sgr07"]
 [ext_resource type="Texture2D" uid="uid://bt1lcg3m0tsay" path="res://assets/backgroundlvl/tile17.png" id="2_skgd2"]
 [ext_resource type="Texture2D" uid="uid://c2b0qij2vhk4k" path="res://assets/backgroundlvl/object_0001_tree2.png" id="3_pnmw7"]
 [ext_resource type="Texture2D" uid="uid://7wwmnlv8funi" path="res://assets/backgroundlvl/tile8.png" id="5_p3l2y"]
 [ext_resource type="Texture2D" uid="uid://cy6jfdkuyyt77" path="res://assets/backgroundlvl/barrel.png" id="6_yrwk3"]
 [ext_resource type="Texture2D" uid="uid://qurmgexc535i" path="res://assets/backgroundlvl/door1.png" id="7_qucg3"]
+[ext_resource type="PackedScene" uid="uid://7htnqsg8j7rt" path="res://player/player.tscn" id="8_m0ys2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nl6m"]
 size = Vector2(1148.5, 88)
@@ -107,10 +107,6 @@ texture = ExtResource("6_yrwk3")
 position = Vector2(1035, 345)
 texture = ExtResource("7_qucg3")
 
-[node name="player" parent="." instance=ExtResource("2_1w5hp")]
-position = Vector2(280, 529)
-scale = Vector2(0.41092, 0.416342)
-
 [node name="Border" type="StaticBody2D" parent="."]
 
 [node name="main floor" type="CollisionShape2D" parent="Border"]
@@ -124,3 +120,7 @@ shape = SubResource("RectangleShape2D_ots6u")
 [node name="right wall" type="CollisionShape2D" parent="Border"]
 position = Vector2(1159.75, 322)
 shape = SubResource("RectangleShape2D_7mdta")
+
+[node name="player" parent="." instance=ExtResource("8_m0ys2")]
+position = Vector2(431, 558)
+scale = Vector2(0.411, 0.411)
