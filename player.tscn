@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://ds0sg1x3rrg8a"]
+[gd_scene load_steps=47 format=3 uid="uid://7htnqsg8j7rt"]
 
 [ext_resource type="Script" path="res://Player.cs" id="1_olqdd"]
 [ext_resource type="Texture2D" uid="uid://3w6n3a6nk11q" path="res://assets/turtle/idle/Idle_000.png" id="2_lqvdy"]
