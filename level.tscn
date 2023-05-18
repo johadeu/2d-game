@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsur3lyjqvwrg"]
+
+[ext_resource type="Texture2D" uid="uid://c3be1b26cbb5r" path="res://assets/backgroundlvl/BG02.png" id="1_qbpom"]
+[ext_resource type="PackedScene" uid="uid://ds0sg1x3rrg8a" path="res://player.tscn" id="2_1w5hp"]
+[ext_resource type="Texture2D" uid="uid://cactxosct6v7b" path="res://assets/backgroundlvl/Death3.png" id="2_sgr07"]
+[ext_resource type="Texture2D" uid="uid://c2b0qij2vhk4k" path="res://assets/backgroundlvl/object_0001_tree2.png" id="3_pnmw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nl6m"]
+size = Vector2(1148.5, 88)
+
+[node name="lvlNode2D" type="Node2D"]
+position = Vector2(3, 0)
+
+[node name="Hintergund" type="Node2D" parent="."]
+
+[node name="Bg02" type="Sprite2D" parent="Hintergund"]
+position = Vector2(574, 322)
+scale = Vector2(0.823994, 0.832685)
+texture = ExtResource("1_qbpom")
+
+[node name="Death3" type="Sprite2D" parent="Hintergund"]
+position = Vector2(416, 230)
+scale = Vector2(1.52344, 1.40625)
+texture = ExtResource("2_sgr07")
+
+[node name="Object0001Tree2" type="Sprite2D" parent="Hintergund"]
+position = Vector2(747.25, 228)
+scale = Vector2(2.29297, 2.64063)
+texture = ExtResource("3_pnmw7")
+
+[node name="player" parent="." instance=ExtResource("2_1w5hp")]
+position = Vector2(-227, 428)
+scale = Vector2(0.41092, 0.416342)
+
+[node name="Border" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(574.75, 599)
+shape = SubResource("RectangleShape2D_1nl6m")

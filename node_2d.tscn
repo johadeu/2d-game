@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6daj"]
 size = Vector2(1151, 168)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_buenv"]
-size = Vector2(131, 125)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1stjy"]
+size = Vector2(125, 129)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmsrg"]
 size = Vector2(15, 833)
@@ -28,8 +28,8 @@ position = Vector2(216, 153)
 texture = ExtResource("1_q3oge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(216.5, 152.5)
-shape = SubResource("RectangleShape2D_buenv")
+position = Vector2(216.5, 149.5)
+shape = SubResource("RectangleShape2D_1stjy")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
