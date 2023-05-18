@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://7htnqsg8j7rt"]
+[gd_scene load_steps=101 format=3 uid="uid://7htnqsg8j7rt"]
 
 [ext_resource type="Script" path="res://player/Player.cs" id="1_cwq0e"]
 [ext_resource type="Texture2D" uid="uid://3w6n3a6nk11q" path="res://assets/turtle/idle/Idle_000.png" id="2_oxthc"]
@@ -91,13 +91,14 @@
 [ext_resource type="Texture2D" uid="uid://88sukb8i5ppc" path="res://assets/turtle/idle_blinking/Idle Blinking_015.png" id="89_2atao"]
 [ext_resource type="Texture2D" uid="uid://5jnhmde3lu1e" path="res://assets/turtle/idle_blinking/Idle Blinking_016.png" id="90_m3bb1"]
 [ext_resource type="Texture2D" uid="uid://bja137f4cbhr" path="res://assets/turtle/idle_blinking/Idle Blinking_017.png" id="91_7qs4c"]
+[ext_resource type="Texture2D" uid="uid://d2ebu5byq7cf4" path="res://gun_no_left_hand.png" id="92_3tqsr"]
 
 [sub_resource type="Animation" id="Animation_qius7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -113,7 +114,7 @@ length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -129,7 +130,7 @@ length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -145,7 +146,7 @@ length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -161,7 +162,7 @@ length = 1.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -178,7 +179,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:texture")
+tracks/0/path = NodePath("Sprites/Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -206,10 +207,6 @@ size = Vector2(537, 360)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_cwq0e")
 
-[node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(1, -190)
-texture = ExtResource("2_oxthc")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 speed_scale = 2.0
 libraries = {
@@ -217,5 +214,20 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(31.5, -179)
+position = Vector2(1, -177)
 shape = SubResource("RectangleShape2D_vjohx")
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 10.0
+
+[node name="Sprites" type="Node2D" parent="CharacterBody2D"]
+
+[node name="Sprite" type="Sprite2D" parent="CharacterBody2D/Sprites"]
+position = Vector2(1, -170)
+texture = ExtResource("2_oxthc")
+
+[node name="GunNoLeftHand" type="Sprite2D" parent="CharacterBody2D/Sprites"]
+position = Vector2(199, -96)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("92_3tqsr")
+flip_h = true
